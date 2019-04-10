@@ -1,11 +1,11 @@
 #### This is my programming portfolio!
 
-#Tasks created in Robot Framework base on Python
+#Tasks created in Robot Framework based on Python
 1. registration_form.robot
 2. invalid_login.robot
 
 
-#Tasks created in JUnit framework base on Java
+#Tasks created in JUnit framework based on Java
 1. registration_form.java
 
 

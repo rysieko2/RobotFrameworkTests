@@ -1,4 +1,4 @@
-#Fibonacci sequence
+####fibonacci_sequence
 
 x = input("How many Fibonacci numbers:")
 x = int(x)
