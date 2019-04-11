@@ -12,10 +12,8 @@ ${PASSWORD}                     codersguru
 *** Test Cases ***
 Empty Password[N]
     [Documentation]                 Should be "To pole jest wymagane"
-    open browser                    ${URL}   ${Browser}
-    maximize browser window
-    clear element text              id=username
-    clear element text              id=password
+    Full Browser
+    Clear Fields
     input text                      id=username     ${USER}
     click button                    id=_submit
     click button                    id=_submit
@@ -24,10 +22,8 @@ Empty Password[N]
 
 Empty Username[N]
     [Documentation]                 Should be "To pole jest wymagane"
-    open browser                    ${URL}   ${Browser}
-    maximize browser window
-    clear element text              id=username
-    clear element text              id=password
+    Full Browser
+    Clear Fields
     input password                  id=password     ${PASSWORD}
     click button                    id=_submit
     click button                    id=_submit
@@ -36,20 +32,16 @@ Empty Username[N]
 
 Empty Username And Password[N]
     [Documentation]                 Should be "To pole jest wymagane"
-    open browser                    ${URL}   ${Browser}
-    maximize browser window
-    clear element text              id=username
-    clear element text              id=password
+    Full Browser
+    Clear Fields
     click button                    id=_submit
     element should contain          xpath=//span      To pole jest wymagane
     close browser
 
 Invalid Username[N]
     [Documentation]                 Should be "Nieprawidłowe dane"
-    open browser                    ${URL}   ${Browser}
-    maximize browser window
-    clear element text              id=username
-    clear element text              id=password
+    Full Browser
+    Clear Fields
     input text                      id=username     kordecki.k
     input password                  id=password     ${PASSWORD}
     click button                    id=_submit
@@ -59,10 +51,8 @@ Invalid Username[N]
 
 Invalid Password[N]
     [Documentation]                 Should be "Nieprawidłowe dane"
-    open browser                    ${URL}   ${Browser}
-    maximize browser window
-    clear element text              id=username
-    clear element text              id=password
+    Full Browser
+    Clear Fields
     input text                      id=username     ${USER}
     input password                  id=password     ${USER}
     click button                    id=_submit
@@ -72,13 +62,20 @@ Invalid Password[N]
 
 Invalid Username And Password[N]
     [Documentation]                 Should be "Nieprawidłowe dane"
-    open browser                    ${URL}   ${Browser}
-    maximize browser window
-    clear element text              id=username
-    clear element text              id=password
+    Full Browser
+    Clear Fields
     input text                      id=username     codersguru
     input password                  id=password     ${USER}
     click button                    id=_submit
     click button                    id=_submit
     element should contain          xpath=/html/body/div/div[1]     Nieprawidłowe dane.
     close browser
+
+*** keywords ***
+Full Browser
+    open browser                    ${URL}   ${Browser}
+    maximize browser window
+
+Clear Fields
+    clear element text              id=username
+    clear element text              id=password
