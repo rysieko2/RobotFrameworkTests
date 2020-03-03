@@ -14,14 +14,14 @@ User registration
     clear element text              id=first-name
     input text                      id=first-name       Stanisław
     clear element text              id=last-name
-    input text                      id=last-name        Światłowski
+    input text                      id=last-name        Kowalski
     click element                   xpath=//label[2]
     clear element text              id=dob
     input text                      id=dob              07/27/1984
     clear element text              id=address
     input text                      id=address          Mazowiecka 14/8
     clear element text              id=email
-    input password                  id=email            swiatlowski.s@gmail.com
+    input password                  id=email            kowalski.s@gmail.com
     clear element text              id=password
     input text                      id=password         swiat!2@
     clear element text              id=company
